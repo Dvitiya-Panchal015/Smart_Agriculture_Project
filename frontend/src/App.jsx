@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import "./styles.css";
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
 
 const slides = [
   {
@@ -199,7 +199,7 @@ function WorkspacePage({ page, onOpenService, showNotice }) {
   const [weather, setWeather] = useState(null);
   const [weatherError, setWeatherError] = useState("");
   const [weatherLoading, setWeatherLoading] = useState(false);
-  const weatherApiUrl = import.meta.env.VITE_API_URL || "http://localhost:8000";
+  const weatherApiUrl = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
 
   useEffect(() => {
     if (page !== "Weather station") return undefined;
@@ -344,7 +344,7 @@ function App() {
             <button onClick={() => showNotice("A farm guide will be in touch soon")}>Talk to an expert <Icon name="arrow" size={14} /></button>
           </div>
           <div className="profile">
-            <div className="avatar">AM</div><div><strong>Alex Morgan</strong><small>Sunrise Valley Farm</small></div><span className="profile-more">•••</span>
+            <div className="avatar">DP</div><div><strong>Dvitiya Panchal</strong><small>Sunrise Valley Farm</small></div><span className="profile-more">•••</span>
           </div>
         </div>
       </aside>
@@ -359,7 +359,7 @@ function App() {
         <div className="page-content">
           {servicePage ? <ServicePage serviceName={servicePage} onBack={() => { setServicePage(""); setActiveNav("Overview"); }} showNotice={showNotice} /> : activeNav !== "Overview" ? <WorkspacePage page={activeNav} onOpenService={(name) => { setServicePage(name); setActiveNav("Overview"); }} showNotice={showNotice} /> : <>
           <section className="welcome-row">
-            <div><p className="overline">{greeting}, Alex <span className="wave">✦</span></p><h1>Here’s your farm at a glance.</h1><p className="subheading">A little progress every day adds up to a great season.</p></div>
+            <div><p className="overline">{greeting}, Dvitiya <span className="wave">✦</span></p><h1>Here’s your farm at a glance.</h1><p className="subheading">A little progress every day adds up to a great season.</p></div>
             <div className="weather-pill"><div className="weather-sun"><Icon name={currentWeather?.current.rain_probability > 40 ? "droplet" : "sun"} size={24} /></div><div><strong>{currentWeather ? `${currentWeather.current.temperature}°` : "—"} <span>{currentWeather?.current.description || "Weather unavailable"}</span></strong><small>{currentWeather ? `${currentWeather.location} · Today` : "Connect to weather service"}</small></div></div>
           </section>
 
