@@ -117,3 +117,4 @@ Run training again whenever the source datasets or preprocessing logic changes.
 - Keep API keys in environment files, never in source code.
 - Do not commit `backend\.env`.
 - The backend proxies OpenWeatherMap requests so the key is not sent to browsers."# Smart_Agriculture_MLOps_Project" 
+"# Smart_Agriculture_Project" 
