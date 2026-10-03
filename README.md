@@ -24,7 +24,7 @@ frontend/                   React/Vite application
 
 ## Requirements
 
-- Python 3.11+
+- Python 3.11-3.13 (model artifacts use scikit-learn 1.6.1)
 - Node.js and npm
 - An OpenWeatherMap API key for live weather data
 
@@ -116,4 +116,4 @@ Run training again whenever the source datasets or preprocessing logic changes.
 
 - Keep API keys in environment files, never in source code.
 - Do not commit `backend\.env`.
-- The backend proxies OpenWeatherMap requests so the key is not sent to browsers.
+- The backend proxies OpenWeatherMap requests so the key is not sent to browsers."# Smart_Agriculture_MLOps_Project" 
